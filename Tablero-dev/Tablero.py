@@ -18,11 +18,11 @@ class Tablero:
     #agregue parámetros necesarios después de self
     #para iniciar los valores de sus atributos
 
-    def __init__(self, a, b, c, d):
-        self.jugador1 = a
-        self.jugador2 = b
-        self.jugador3 = c
-        self.jugador4 = d
+    def __init__(self):
+        self.jugador1 = Ficha(input("Digite el color: "))
+        self.jugador2 = Ficha(input("Digite el color: "))
+        self.jugador3 = Ficha(input("Digite el color: "))
+        self.jugador4 = Ficha(input("Digite el color: "))
         return
 
     def juego(self):
@@ -70,11 +70,7 @@ class Tablero:
 
         return ""
 
-#Selección Color de la fichas
+#Inicializador del juego
 
-a = Ficha(input("Digite el color: "))
-b = Ficha(input("Digite el color: "))
-c = Ficha(input("Digite el color: "))
-d = Ficha(input("Digite el color: "))
-game = Tablero(a,b,c,d) #El juego esta diseñado para 4 participantes
+game = Tablero() #El juego esta diseñado para 4 participantes
 game.juego() #llamada al juego con las fichas creadas
